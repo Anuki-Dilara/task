@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="asets/css/bootstrap.min.css">
 </head>
 <body>
-<section class="container mt-5">
+<!--<section class="container mt-5">
     <h1 id="h1ID">What is BOM & What is DOM</h1>
     <h1 class="h1Class">What is BOM & What is DOM</h1>
     <h2 id="h2ID">What really JS DO?</h2>
@@ -15,17 +15,42 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dolorum eos esse eveniet harum magni maiores maxime optio provident quaerat quidem, quis vel. Accusamus consequuntur excepturi impedit sapiente temporibus voluptates!</p>
     <input class="form-control" type="text" name="cusName">
     <button class="btn btn-danger mt-3">Test</button>
+</section>-->
+<section class="container mt-3">
+    <section class="row">
+        <!--Case One-->
+        <div class="col">
+            <h1>Hello There How are you.?</h1>
+            <input id="txt" class="form-control" type="text" placeholder="Input Something">
+            <button id="btn1" class="mt-2 btn btn-danger">Change Text</button>
+        </div>
+
+        <!--Case Two-->
+        <div class="col">
+            <h1>Input an Image Url</h1>
+            <input id="url" class="form-control" type="url" placeholder="Input Image URL">
+            <div id="img" style="height: 50vh" class="mt-2 border shadow"></div>
+            <button id="btn2" class="mt-2 btn btn-danger">Change Image</button>
+        </div>
+    </section>
 </section>
 
-
 <script>
-    document.querySelector("#h1ID").addEventListener("click",function(){
+   /* document.querySelector("#h1ID").addEventListener("click",function(){
         document.querySelector("#h1ID").remove();
     });
 
     document.querySelector("button").addEventListener("click",function(){
         document.querySelector('h1').innerText= document.querySelector("input").value;;
-    });
+    });*/
+   document.querySelector("#txt").addEventListener("input",function (){
+       document.querySelector("h1").innerText=document.querySelector('input').value;
+
+   })
+   document.querySelector("button").addEventListener("click",function (){
+       document.querySelector("h1").style.color='red';
+
+   })
 </script>
 </body>
 </html>
