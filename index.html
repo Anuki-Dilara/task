@@ -16,16 +16,16 @@
     <input class="form-control" type="text" name="cusName">
     <button class="btn btn-danger mt-3">Test</button>
 </section>-->
-<section class="container mt-3">
+<!--<section class="container mt-3">
     <section class="row">
-        <!--Case One-->
+        &lt;!&ndash;Case One&ndash;&gt;
         <div class="col">
             <h1>Hello There How are you.?</h1>
             <input id="txt" class="form-control" type="text" placeholder="Input Something">
             <button id="btn1" class="mt-2 btn btn-danger">Change Text</button>
         </div>
 
-        <!--Case Two-->
+        &lt;!&ndash;Case Two&ndash;&gt;
         <div class="col">
             <h1>Input an Image Url</h1>
             <input id="url" class="form-control" type="url" placeholder="Input Image URL">
@@ -33,17 +33,34 @@
             <button id="btn2" class="mt-2 btn btn-danger">Change Image</button>
         </div>
     </section>
+</section>-->
+
+<section class="container">
+    <h1>Task Generator.!</h1>
+    <div class="row">
+        <div class="col-4">
+            <input id="txt" class="form-control" type="text" placeholder="Input a Task">
+            <button id="btn" class="btn btn-danger mt-2">Add Task</button>
+        </div>
+        <div class="offset-1 col-3 shadow overflow-x-hidden" style="height: 70vh">
+            <ol id="list" class="list-group p-2">
+                <li class="list-group-item">Task One</li>
+            </ol>
+        </div>
+    </div>
 </section>
 
 <script>
-   /* document.querySelector("#h1ID").addEventListener("click",function(){
-        document.querySelector("#h1ID").remove();
+    /* document.querySelector("#h1ID").addEventListener("click",function(){
+    document.querySelector("#h1ID").remove();
     });
 
     document.querySelector("button").addEventListener("click",function(){
-        document.querySelector('h1').innerText= document.querySelector("input").value;;
+    document.querySelector('h1').innerText= document.querySelector("input").value;;
     });*/
-   document.querySelector("#txt").addEventListener("input",function (){
+
+    /*task 1*/
+  /* document.querySelector("#txt").addEventListener("input",function (){
        document.querySelector("h1").innerText=document.querySelector('input').value;
 
    })
@@ -51,6 +68,28 @@
        document.querySelector("h1").style.color='red';
 
    })
+    /!*task 2*!/
+    document.querySelector("button").addEventListener("click",function(){
+        document.querySelector("#url").value;
+        document.querySelector("#img").style.backgroundImage;
+    });*/
+
+    let btn = document.querySelector("#btn");
+    let ol = document.querySelector("#list");
+
+    btn.addEventListener("click",function(){
+        let type = document.querySelector("#txt").value;
+        console.log(type);
+
+        let li = document.createElement("li");
+        li.setAttribute("class","list-group-item")
+
+        li.textContent=type;
+
+        ol.append(li);
+    });
+
 </script>
 </body>
 </html>
+
